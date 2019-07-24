@@ -12,7 +12,11 @@ function frameIt(){
 }
 
 function pressIt(){
-  $('#typing')
+  $('#typing').on("keydown", function(key){
+    if(key.which == 'g'){
+      alert('G was pressed')
+    }
+  })
 }
 
 $(document).ready(function(){
